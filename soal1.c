@@ -58,7 +58,7 @@ int main (void){
     int inp;
 
     // menerima input pertama
-    (void)scanf("%d", &inp);
+    scanf("%d", &inp);
     
     while(inp != -1){
         arr = (int*)realloc(arr, (count+1) * sizeof(int)); // realloc untuk menambah ukuran array sebesar +1 elemen
@@ -67,21 +67,48 @@ int main (void){
 
         count++; // menambah nilai count dengan +1
 
-        (void)scanf("%d", &inp); // menerima input kembali
+        scanf("%d", &inp); // menerima input kembali
     }
 
     bubbleSort(arr, count); // sorting dynamic array
 
-    float MEDIAN = findMedian(arr, count); // memperoleh nilai median
+
+    if(count % 2 == 0){
+        // even number of element, then the MEDIAN value is a decimal
+
+        float MEDIAN = findMedian(arr, count); // memperoleh nilai median
+
+        // format output
+        printf("COUNT %d ", count);
+        printf("SORTED");
+        for(int i = 0; i < count; i++){
+            printf(" %d", arr[i]);
+        }
+        printf(" ");
+        printf("MEDIAN %.2f\n", MEDIAN);
+    }
+    else {
+        // odd number of element, then the MEDIAN value is an integer
+        int MEDIAN = (int)findMedian(arr, count);
+
+        printf("COUNT %d ", count);
+        printf("SORTED");
+        for(int i = 0; i < count; i++){
+            printf(" %d", arr[i]);
+        }
+        printf(" ");
+        printf("MEDIAN %d\n", MEDIAN);
+    }
+    // float MEDIAN = findMedian(arr, count); // memperoleh nilai median
 
     // format output
-    printf("COUNT %d ", count);
-    printf("SORTED");
-    for(int i = 0; i < count; i++){
-        printf(" %d", arr[i]);
-    }
-    printf(" ");
-    printf("MEDIAN %.2f\n", MEDIAN);
+    // printf("COUNT %d ", count);
+    // printf("SORTED");
+    // for(int i = 0; i < count; i++){
+    //     printf(" %d", arr[i]);
+    // }
+    // printf(" ");
+    // printf("MEDIAN %.2f\n", MEDIAN);
 
     return 0;
 }
