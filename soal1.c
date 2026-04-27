@@ -75,12 +75,12 @@ int main (void){
     float MEDIAN = findMedian(arr, count); // memperoleh nilai median
 
     // format output
-    printf("COUNT %d\n", count);
+    printf("COUNT %d ", count);
     printf("SORTED");
     for(int i = 0; i < count; i++){
         printf(" %d", arr[i]);
     }
-    printf("\n");
+    printf(" ");
     printf("MEDIAN %.2f\n", MEDIAN);
 
     return 0;
