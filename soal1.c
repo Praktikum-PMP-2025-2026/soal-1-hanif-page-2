@@ -3,7 +3,7 @@
  *   Hari dan Tanggal    : Senin, 27 April 2026
  *   Nama (NIM)          : 13224087
  *   Nama File           : soal1.c
- *   Deskripsi           : Kode ini merupakan solusi dari Praktikum EL2008, Modul 3, Soal 1, yaitu Sensor Badai Dinamis. Masalah ini akan menerima input ... 
+ *   Deskripsi           : Kode ini merupakan solusi dari Praktikum EL2008, Modul 3, Soal 1, yaitu Sensor Badai Dinamis. Masalah ini akan menerima input nilai suatu input elemen integer yang jumlahnya tak diketahui, serta input akan berakhir ketika user memasukkan nilai -1. Dari nilai yang diinput (selin -1), perlu distore di sebuah dynamic array. Setelah itu, dynamic array perlu disort dan ditentukan mediannya. Objektif keluaran dari program adalah COUNT, SORTED ARRAY, dan MEDIAN. 
  */
 
 #include <stdio.h>
@@ -99,16 +99,6 @@ int main (void){
         printf(" ");
         printf("MEDIAN %d\n", MEDIAN);
     }
-    // float MEDIAN = findMedian(arr, count); // memperoleh nilai median
-
-    // format output
-    // printf("COUNT %d ", count);
-    // printf("SORTED");
-    // for(int i = 0; i < count; i++){
-    //     printf(" %d", arr[i]);
-    // }
-    // printf(" ");
-    // printf("MEDIAN %.2f\n", MEDIAN);
 
     return 0;
 }
