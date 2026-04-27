@@ -58,7 +58,7 @@ int main (void){
     int inp;
 
     // menerima input pertama
-    scanf("%d", &inp);
+    (void)scanf("%d", &inp);
     
     while(inp != -1){
         arr = (int*)realloc(arr, (count+1) * sizeof(int)); // realloc untuk menambah ukuran array sebesar +1 elemen
@@ -67,7 +67,7 @@ int main (void){
 
         count++; // menambah nilai count dengan +1
 
-        scanf("%d", &inp); // menerima input kembali
+        (void)scanf("%d", &inp); // menerima input kembali
     }
 
     bubbleSort(arr, count); // sorting dynamic array
